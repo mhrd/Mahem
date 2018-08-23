@@ -17,7 +17,7 @@ public class Management_Panel extends AppCompatActivity {
 
     RecyclerView recyclerView;
     List<Advertising> AdvList;
-    AdvAdapter adapter;
+    panelAdapter adapter;
     CircleImageView AccountImage;
 
 
@@ -49,7 +49,7 @@ public class Management_Panel extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         AdvList.add(new Advertising(title,describtion,time,agahiimage,family_name,chat_time,userImage));
-        adapter=new AdvAdapter(this,AdvList);
+        adapter=new panelAdapter(this,AdvList);
         recyclerView.setAdapter(adapter);
 
         paneltxt=(TextView)findViewById(R.id.mp);
