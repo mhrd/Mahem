@@ -44,9 +44,10 @@ public class Management_Panel extends AppCompatActivity {
         describtion="";
         family_name="";
         chat_time="";
-        userImage=;
+        
         */
 
+        userImage=R.drawable.cameraa;
 
 
         AdvList=new ArrayList<>();
