@@ -1,5 +1,7 @@
 
 package com.eagle.anonymous.mahem;
+
+
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +35,8 @@ public class Management_Panel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_management__panel);
         //fill this variables with information
+
+
         /*
         agahiimage=;
         time="";
@@ -42,6 +46,7 @@ public class Management_Panel extends AppCompatActivity {
         chat_time="";
         userImage=;
         */
+
 
 
         AdvList=new ArrayList<>();
@@ -67,3 +72,4 @@ public class Management_Panel extends AppCompatActivity {
         });
     }
 }
+
