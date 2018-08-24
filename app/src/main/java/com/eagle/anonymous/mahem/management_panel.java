@@ -1,4 +1,3 @@
-
 package com.eagle.anonymous.mahem;
 
 
@@ -15,7 +14,7 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class Management_Panel extends AppCompatActivity {
+public class management_panel extends AppCompatActivity {
 
     RecyclerView recyclerView;
     List<Advertising> AdvList;
