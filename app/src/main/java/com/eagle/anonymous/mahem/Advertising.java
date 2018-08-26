@@ -3,6 +3,12 @@ public class Advertising {
     private String title,details,time,family_name,chat_time;
     private int image,userImage;
 
+    public Advertising(String title, String details, String time, int image) {
+        this.title = title;
+        this.details = details;
+        this.time = time;
+        this.image = image;
+    }
     public Advertising(String title, String details, String time,int image,String family_name,String chat_time,int userImage) {
         this.title = title;
         this.details = details;
