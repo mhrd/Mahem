@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.niky.takhfifyab.MainActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:layout_gravity="right"
+        android:background="#e30907"
+        ></android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="3dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="'گوشی موبایل "
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:drawableRight="@mipmap/ic_phone"
+                android:gravity="right|center"
+                android:textSize="18dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/btn1"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="تبلت"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:drawableRight="@mipmap/ic_phone"
+                android:gravity="right|center"
+                android:textSize="18dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/btn2"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="لوازم جانبی موبایل و تبلت"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:drawableRight="@mipmap/ic_phone"
+                android:gravity="right|center"
+                android:textSize="18dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/btn3"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="تلفن رومیزی و سیم کارت"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:drawableRight="@mipmap/ic_phone"
+                android:gravity="right|center"
+                android:textSize="18dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:id="@+id/btn4"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
