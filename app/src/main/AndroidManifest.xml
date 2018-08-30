@@ -73,7 +73,12 @@
         <activity android:name=".Sargarmi_book" />
         <activity android:name=".Personal" />
         <activity android:name=".SabtAgahi" />
-    
+        <activity android:name=".SabtAgahi_other"/>
+        <activity android:name=".SabtAgahi_Takhfif" />
+        <activity android:name=".SabtAgahi_Estekhdam" />
+        <activity android:name=".SabtAgahi_Car" />
+        <activity android:name=".SabtAgahi_Amlak_Home" />
+        <activity android:name=".SabtAgahi_Amlak_Office"/>
     </application>
 
 </manifest>
