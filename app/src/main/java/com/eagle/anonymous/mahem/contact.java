@@ -28,7 +28,7 @@ public class contact extends AppCompatActivity {
     String ph_number="";
     String formattedNumber = PhoneNumberUtils.formatNumber(ph_number,
             Locale.getDefault().getCountry());
-    String email_address="moh.sal110@gmail.com";
+    String email_address="";
     ////
     @Override
     protected void onCreate(Bundle savedInstanceState) {
