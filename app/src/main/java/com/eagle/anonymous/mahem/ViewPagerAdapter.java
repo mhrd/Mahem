@@ -13,7 +13,11 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     private Context context;
     private LayoutInflater inflater;
+        
+        ///////////fill this array with network data for view pager
+        /////////the drawables that I set to array is for test
     private int[] images={R.drawable.p1,R.drawable.p2,R.drawable.p3};
+        ////////////////
 
 
 
