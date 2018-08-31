@@ -53,6 +53,7 @@ public class management_panel extends AppCompatActivity {
         recyclerView=(RecyclerView)findViewById(R.id.RecyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        ///this line add search views to the list:
         AdvList.add(new Advertising(title,describtion,time,agahiimage,family_name,chat_time,userImage));
         adapter=new panelAdapter(this,AdvList);
         recyclerView.setAdapter(adapter);
