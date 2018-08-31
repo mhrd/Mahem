@@ -1,4 +1,4 @@
-package com.example.mohsal.agahishow2;
+package com.eagle.anonymous.mahem;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -182,25 +182,7 @@ public class AgahiShow extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(AgahiShow.this,contact.class);
                 startActivity(intent);
-//                AlertDialog.Builder builder=new AlertDialog.Builder(AgahiShow.this);
-//
-//                inflater =(LayoutInflater)AgahiShow.this.getSystemService(AgahiShow.this.LAYOUT_INFLATER_SERVICE);
-//                View v=inflater.from(AgahiShow.this).inflate(R.layout.activity_contact,null);
-//                builder.setView(v);
-//                builder.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//                    @Override
-//                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//                        contact c=new contact();
-//
-//                    }
-//
-//                    @Override
-//                    public void onNothingSelected(AdapterView<?> adapterView) {
-//
-//                    }
-//                });
-//
-//                builder.show();
+
 
 
             }
