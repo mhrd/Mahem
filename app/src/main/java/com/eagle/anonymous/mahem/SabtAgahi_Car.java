@@ -376,8 +376,19 @@ public class SabtAgahi_Car extends AppCompatActivity {
         });
 
 
+    send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tt("ارسال شد.");
+            }
+        });
+
     }
 
+    public void tt(String s)
+    {
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
+    }
 
     public PopupWindow popupDisplay(View view)
     {
