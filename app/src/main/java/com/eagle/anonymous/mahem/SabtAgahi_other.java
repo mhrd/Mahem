@@ -126,8 +126,19 @@ EditText Group,Title,Type,Gheimat,Tozihat,location;
             }
         });
 
+     send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tt("ارسال شد.");
+            }
+        });
+
     }
 
+    public void tt(String s)
+    {
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
+    }
 
 
 
