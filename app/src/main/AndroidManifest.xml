@@ -104,6 +104,8 @@
         <activity android:name=".SabtAgahi_Car" />
         <activity android:name=".SabtAgahi_Amlak_Home" />
         <activity android:name=".SabtAgahi_Amlak_Office"/>
+        <activity android:name=".JobBankMenu" />
+           <activity android:name=".Filter_group" />
     </application>
 
 </manifest>
