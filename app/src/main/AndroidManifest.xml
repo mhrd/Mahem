@@ -104,8 +104,14 @@
         <activity android:name=".SabtAgahi_Car" />
         <activity android:name=".SabtAgahi_Amlak_Home" />
         <activity android:name=".SabtAgahi_Amlak_Office"/>
+         <activity android:name=".Filter_group" />
+        <activity android:name=".Filter_Estekhdami" />
+        <activity android:name=".Filter_Khodro" />
         <activity android:name=".JobBankMenu" />
-           <activity android:name=".Filter_group" />
+        <activity android:name=".Filter_Home" />
+        <activity android:name=".Filter_Estekhdami_monshi_fani" />
+        <activity android:name=".Filter_other"></activity>
+   
     </application>
 
 </manifest>
