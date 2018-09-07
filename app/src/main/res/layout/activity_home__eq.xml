@@ -24,14 +24,15 @@
             android:id="@+id/title"
             android:textSize="21dp"
             android:text="لوازم خانگی"
-            android:gravity="center"
-            android:padding="2dp"/>
+            android:gravity="center|bottom"
+            android:paddingBottom="8dp"
+            android:paddingRight="3dp"/>
         <ImageView
             android:id="@+id/ic_logo"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_logo" />
+            android:src="@mipmap/ic_launcher_llogo" />
 
 
     </LinearLayout>
