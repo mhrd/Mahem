@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SabtAgahi_other extends AppCompatActivity {
 EditText Group,Title,Type,Gheimat,Tozihat,location;
@@ -46,14 +47,41 @@ EditText Group,Title,Type,Gheimat,Tozihat,location;
         TypeLayout=inflater.inflate(R.layout.type_layout,null);
         GheimatLayout=inflater.inflate(R.layout.gheimat_layout,null);
 
+        Type_map();
+        Gheimat_map();
+
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tt("ارسال شد.");
+            }
+        });
+
+    }
+
+    public void tt(String s)
+    {
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
+    }
+
+
+    public PopupWindow popupDisplay(View view)
+    {
+        final PopupWindow popupWindow=new PopupWindow(this);
+        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+     //   View view=inflater.inflate(R.layout.mylayout,null);
+        // Button item=(Button)view.findViewById(R.id.btn);
+        popupWindow.setFocusable(true);
+        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setContentView(view);
+        return popupWindow;
+    }
+
+    public void Type_map()
+    {
         Type_1=(TextView)Type.findViewById(R.id.Tt1);
         Type_2=(TextView)Type.findViewById(R.id.Tt2);
-        Gh_1=(TextView)Gheimat.findViewById(R.id.Tt1);
-        Gh_2=(TextView)Gheimat.findViewById(R.id.Tt2);
-        Gh_3=(TextView)Gheimat.findViewById(R.id.Tt3);
-        Gh_4=(TextView)Gheimat.findViewById(R.id.Tt4);
-
-
 
         Type.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +109,19 @@ EditText Group,Title,Type,Gheimat,Tozihat,location;
                 Type_Layout.dismiss();
             }
         });
+
+
+    }
+
+    public void Gheimat_map()
+    {
+
+        Gh_1=(TextView)Gheimat.findViewById(R.id.Tt1);
+        Gh_2=(TextView)Gheimat.findViewById(R.id.Tt2);
+        Gh_3=(TextView)Gheimat.findViewById(R.id.Tt3);
+        Gh_4=(TextView)Gheimat.findViewById(R.id.Tt4);
+
+
 
 
         Gheimat.setOnClickListener(new View.OnClickListener() {
@@ -126,32 +167,5 @@ EditText Group,Title,Type,Gheimat,Tozihat,location;
             }
         });
 
-     send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                tt("ارسال شد.");
-            }
-        });
-
-    }
-
-    public void tt(String s)
-    {
-        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
-    }
-
-
-
-    public PopupWindow popupDisplay(View view)
-    {
-        final PopupWindow popupWindow=new PopupWindow(this);
-        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-     //   View view=inflater.inflate(R.layout.mylayout,null);
-        // Button item=(Button)view.findViewById(R.id.btn);
-        popupWindow.setFocusable(true);
-        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setContentView(view);
-        return popupWindow;
     }
 }

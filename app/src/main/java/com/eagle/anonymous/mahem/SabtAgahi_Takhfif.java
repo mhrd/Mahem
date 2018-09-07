@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SabtAgahi_Takhfif extends AppCompatActivity {
 
@@ -45,19 +46,43 @@ public class SabtAgahi_Takhfif extends AppCompatActivity {
         cam3=(Button)findViewById(R.id.c3);
         cam4=(Button)findViewById(R.id.c4);
         cam5=(Button)findViewById(R.id.c5);
+        rules=(CheckBox)findViewById(R.id.rule);
 
         LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         CallLayout=inflater.inflate(R.layout.call_layout,null);
         CityLayout=inflater.inflate(R.layout.city_layout,null);
 
-        PhoneNum=(EditText)CallLayout.findViewById(R.id.call1);
-        Email=(EditText)CallLayout.findViewById(R.id.Call2);
+        City_map();
+        Call_map();
 
-        rules=(CheckBox)findViewById(R.id.rule);
-        chat=(CheckBox)CallLayout.findViewById(R.id.chat);
-        email_check=(CheckBox)findViewById(R.id.Email_check);
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tt("ارسال شد.");
+            }
+        });
 
-      city_1=(TextView)CityLayout.findViewById(R.id.Tt1);
+    }
+    public void tt(String s)
+    {
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
+    }
+
+    public PopupWindow popupDisplay(View view)
+    {
+        final PopupWindow popupWindow=new PopupWindow(this);
+        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+              popupWindow.setFocusable(true);
+        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setContentView(view);
+        return popupWindow;
+    }
+
+    public void City_map()
+    {
+
+        city_1=(TextView)CityLayout.findViewById(R.id.Tt1);
         city_2=(TextView)CityLayout.findViewById(R.id.Tt2);
         city_3=(TextView)CityLayout.findViewById(R.id.Tt3);
         city_4=(TextView)CityLayout.findViewById(R.id.Tt4);
@@ -71,18 +96,6 @@ public class SabtAgahi_Takhfif extends AppCompatActivity {
         city_12=(TextView)CityLayout.findViewById(R.id.Tt12);
         city_13=(TextView)CityLayout.findViewById(R.id.Tt13);
         city_14=(TextView)CityLayout.findViewById(R.id.Tt14);
-
-
-        call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Call_Layout=popupDisplay(CallLayout);
-                Call_Layout.showAsDropDown(view);
-
-
-            }
-        });
 
         city.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +113,7 @@ public class SabtAgahi_Takhfif extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 city.setText(city_1.getText().toString());
-             City_Layout .dismiss();
+                City_Layout .dismiss();
             }
         });
 
@@ -233,29 +246,28 @@ public class SabtAgahi_Takhfif extends AppCompatActivity {
             }
         });
 
-     send.setOnClickListener(new View.OnClickListener() {
+    }
+
+    public  void Call_map()
+    {
+        PhoneNum=(EditText)CallLayout.findViewById(R.id.call1);
+        Email=(EditText)CallLayout.findViewById(R.id.Call2);
+
+
+
+        chat=(CheckBox)CallLayout.findViewById(R.id.chat);
+        email_check=(CheckBox)CallLayout.findViewById(R.id.Email_check);
+
+        call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tt("ارسال شد.");
+
+                Call_Layout=popupDisplay(CallLayout);
+                Call_Layout.showAsDropDown(view);
+
+
             }
         });
 
-    }
-
-    public void tt(String s)
-    {
-        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
-    }
-
-
-    public PopupWindow popupDisplay(View view)
-    {
-        final PopupWindow popupWindow=new PopupWindow(this);
-        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-              popupWindow.setFocusable(true);
-        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setContentView(view);
-        return popupWindow;
     }
 }

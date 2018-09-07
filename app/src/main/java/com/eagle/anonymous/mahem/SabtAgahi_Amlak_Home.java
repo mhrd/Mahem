@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SabtAgahi_Amlak_Home extends AppCompatActivity {
 
@@ -45,6 +46,7 @@ public class SabtAgahi_Amlak_Home extends AppCompatActivity {
         cam3=(Button)findViewById(R.id.c3);
         cam4=(Button)findViewById(R.id.c4);
         cam5=(Button)findViewById(R.id.c5);
+        rules=(CheckBox)findViewById(R.id.rule);
 
         LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         CallLayout=inflater.inflate(R.layout.call_layout,null);
@@ -53,30 +55,142 @@ public class SabtAgahi_Amlak_Home extends AppCompatActivity {
         AgahiDahandeLayout=inflater.inflate(R.layout.agahi_dahande_amlak_layout,null);
         MelkTypeLayout=inflater.inflate(R.layout.melk_type_layout_home,null);
         GheimatMoredNazarLayout=inflater.inflate(R.layout.ghimat_mored_nazar_layout,null);
+        Call_map();
+        Type_map();
+        Gheimat_map();
+        Agahi_D_map();
+        AmlakType_map();
+        Rahn_To_Ejareh_map();
 
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tt("ارسال شد.");
+            }
+        });
+    }
 
-        PhoneNum=(EditText)CallLayout.findViewById(R.id.call1);
-        Email=(EditText)CallLayout.findViewById(R.id.Call2);
+    public void tt(String s)
+    {
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
+    }
+    public PopupWindow popupDisplay(View view)
+    {
+        final PopupWindow popupWindow=new PopupWindow(this);
+        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        popupWindow.setFocusable(true);
+        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setContentView(view);
+        return popupWindow;
+    }
 
-        rahn=(EditText)GheimatMoredNazarLayout.findViewById(R.id.call1);
-        ejareh=(EditText)GheimatMoredNazarLayout.findViewById(R.id.Call2);
-
-        rules=(CheckBox)findViewById(R.id.rule);
-        chat=(CheckBox)CallLayout.findViewById(R.id.chat);
-        email_check=(CheckBox)CallLayout.findViewById(R.id.Email_check);
-        rahn_To_ejareh=(CheckBox)GheimatMoredNazarLayout.findViewById(R.id.RTE);
-
-        Type_1=(TextView)TypeLayout.findViewById(R.id.Tt1);
-        Type_2=(TextView)TypeLayout.findViewById(R.id.Tt2);
-        agahiD_1=(TextView)AgahiDahandeLayout.findViewById(R.id.Tt1);
-        agahiD_2=(TextView)AgahiDahandeLayout.findViewById(R.id.Tt2);
+    public  void Gheimat_map()
+    {
         Gh_1=(TextView)GheimatLayout.findViewById(R.id.Tt1);
         Gh_2=(TextView)GheimatLayout.findViewById(R.id.Tt2);
         Gh_3=(TextView)GheimatLayout.findViewById(R.id.Tt3);
         Gh_4=(TextView)GheimatLayout.findViewById(R.id.Tt4);
-        M_T_1=(TextView)MelkTypeLayout.findViewById(R.id.Tt1);
-        M_T_2=(TextView)MelkTypeLayout.findViewById(R.id.Tt2);
-        M_T_3=(TextView)MelkTypeLayout.findViewById(R.id.Tt3);
+
+        Gheimat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Gheimat_Layout=popupDisplay(GheimatLayout);
+                Gheimat_Layout.showAsDropDown(view);
+
+
+            }
+        });
+
+        Gh_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Gheimat.setText(Gh_1.getText().toString());
+                Gheimat_Layout.dismiss();
+                Gheimat_Mored_Nazar_Layout =popupDisplay(GheimatMoredNazarLayout);
+                Gheimat_Mored_Nazar_Layout.showAsDropDown(Gheimat);
+
+            }
+        });
+
+        Gh_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Gheimat.setText(Gh_2.getText().toString());
+                Gheimat_Layout.dismiss();
+            }
+        });
+
+        Gh_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Gheimat.setText(Gh_3.getText().toString());
+                Gheimat_Layout.dismiss();
+            }
+        });
+
+        Gh_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Gheimat.setText(Gh_4.getText().toString());
+                Gheimat_Layout.dismiss();
+            }
+        });
+
+    }
+
+    public  void Agahi_D_map()
+    {
+
+        agahiD_1=(TextView)AgahiDahandeLayout.findViewById(R.id.Tt1);
+        agahiD_2=(TextView)AgahiDahandeLayout.findViewById(R.id.Tt2);
+
+        AgahiDahande_type.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                agahiD_Layout=popupDisplay(AgahiDahandeLayout);
+                agahiD_Layout.showAsDropDown(view);
+            }
+        });
+
+        agahiD_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AgahiDahande_type.setText(agahiD_1.getText().toString());
+                agahiD_Layout.dismiss();
+            }
+        });
+
+        agahiD_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AgahiDahande_type.setText(agahiD_2.getText().toString());
+                agahiD_Layout.dismiss();
+            }
+        });
+
+    }
+
+    public void Rahn_To_Ejareh_map()
+    {
+
+        rahn=(EditText)GheimatMoredNazarLayout.findViewById(R.id.call1);
+        ejareh=(EditText)GheimatMoredNazarLayout.findViewById(R.id.Call2);
+        rahn_To_ejareh=(CheckBox)GheimatMoredNazarLayout.findViewById(R.id.RTE);
+
+    }
+
+    public  void Call_map()
+    {
+        PhoneNum=(EditText)CallLayout.findViewById(R.id.call1);
+        Email=(EditText)CallLayout.findViewById(R.id.Call2);
+
+
+
+        chat=(CheckBox)CallLayout.findViewById(R.id.chat);
+        email_check=(CheckBox)CallLayout.findViewById(R.id.Email_check);
 
         call.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +202,13 @@ public class SabtAgahi_Amlak_Home extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    public void Type_map()
+    {
+        Type_1=(TextView)Type.findViewById(R.id.Tt1);
+        Type_2=(TextView)Type.findViewById(R.id.Tt2);
 
         Type.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,50 +238,13 @@ public class SabtAgahi_Amlak_Home extends AppCompatActivity {
         });
 
 
-        Gheimat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    }
 
-                Gheimat_Layout=popupDisplay(GheimatLayout);
-                Gheimat_Layout.showAsDropDown(view);
-
-
-            }
-        });
-
-        Gh_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Gheimat.setText(Gh_1.getText().toString());
-                Gheimat_Layout.dismiss();
-               Gheimat_Mored_Nazar_Layout =popupDisplay(GheimatMoredNazarLayout);
-                Gheimat_Mored_Nazar_Layout.showAsDropDown(Gheimat);
-            }
-        });
-
-        Gh_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Gheimat.setText(Gh_2.getText().toString());
-                Gheimat_Layout.dismiss();
-            }
-        });
-
-        Gh_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Gheimat.setText(Gh_3.getText().toString());
-                Gheimat_Layout.dismiss();
-            }
-        });
-
-        Gh_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Gheimat.setText(Gh_4.getText().toString());
-                Gheimat_Layout.dismiss();
-            }
-        });
+    public void AmlakType_map()
+    {
+        M_T_1=(TextView)MelkTypeLayout.findViewById(R.id.Tt1);
+        M_T_2=(TextView)MelkTypeLayout.findViewById(R.id.Tt2);
+        M_T_3=(TextView)MelkTypeLayout.findViewById(R.id.Tt3);
 
         Amlak_type.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,53 +276,6 @@ public class SabtAgahi_Amlak_Home extends AppCompatActivity {
             }
         });
 
-        AgahiDahande_type.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                agahiD_Layout=popupDisplay(AgahiDahandeLayout);
-                agahiD_Layout.showAsDropDown(view);
-            }
-        });
-
-        agahiD_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AgahiDahande_type.setText(agahiD_1.getText().toString());
-                agahiD_Layout.dismiss();
-            }
-        });
-
-        agahiD_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AgahiDahande_type.setText(agahiD_2.getText().toString());
-                agahiD_Layout.dismiss();
-            }
-        });
-     send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                tt("ارسال شد.");
-            }
-        });
-
-    }
-
-    public void tt(String s)
-    {
-        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
-    }
-
-    public PopupWindow popupDisplay(View view)
-    {
-        final PopupWindow popupWindow=new PopupWindow(this);
-        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        popupWindow.setFocusable(true);
-        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setContentView(view);
-        return popupWindow;
     }
 
 }

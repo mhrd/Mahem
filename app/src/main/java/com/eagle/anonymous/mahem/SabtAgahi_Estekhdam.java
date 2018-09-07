@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SabtAgahi_Estekhdam extends AppCompatActivity {
 
@@ -43,30 +44,50 @@ public class SabtAgahi_Estekhdam extends AppCompatActivity {
         cam3=(Button)findViewById(R.id.c3);
         cam4=(Button)findViewById(R.id.c4);
         cam5=(Button)findViewById(R.id.c5);
+        rules=(CheckBox)findViewById(R.id.rule);
 
         LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         CallLayout=inflater.inflate(R.layout.call_layout,null);
         EducationLayout=inflater.inflate(R.layout.education_level_layout,null);
         EducationLayout=inflater.inflate(R.layout.gharardad_layout,null);
 
+        Call_map();
+        Education_map();
+        Gharardad_map();
 
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tt("ارسال شد.");
+            }
+        });
+
+    }
+
+    public void tt(String s)
+    {
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
+    }
+    public PopupWindow popupDisplay(View view)
+    {
+        final PopupWindow popupWindow=new PopupWindow(this);
+        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        popupWindow.setFocusable(true);
+        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+        popupWindow.setContentView(view);
+        return popupWindow;
+    }
+
+    public  void Call_map()
+    {
         PhoneNum=(EditText)CallLayout.findViewById(R.id.call1);
         Email=(EditText)CallLayout.findViewById(R.id.Call2);
 
-        rules=(CheckBox)findViewById(R.id.rule);
+
+
         chat=(CheckBox)CallLayout.findViewById(R.id.chat);
         email_check=(CheckBox)CallLayout.findViewById(R.id.Email_check);
-
-        Ed_1=(TextView)EducationLayout.findViewById(R.id.Tt1);
-        Ed_2=(TextView)EducationLayout.findViewById(R.id.Tt2);
-        Ed_3=(TextView)EducationLayout.findViewById(R.id.Tt3);
-        Ed_4=(TextView)EducationLayout.findViewById(R.id.Tt4);
-        Ed_5=(TextView)EducationLayout.findViewById(R.id.Tt5);
-        Ed_6=(TextView)EducationLayout.findViewById(R.id.Tt6);
-        Gh_1=(TextView)GharardadLayout.findViewById(R.id.Tt1);
-        Gh_2=(TextView)GharardadLayout.findViewById(R.id.Tt2);
-        Gh_3=(TextView)GharardadLayout.findViewById(R.id.Tt3);
-        Gh_4=(TextView)GharardadLayout.findViewById(R.id.Tt4);
 
         call.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +100,16 @@ public class SabtAgahi_Estekhdam extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void Education_map()
+    {
+        Ed_1=(TextView)EducationLayout.findViewById(R.id.Tt1);
+        Ed_2=(TextView)EducationLayout.findViewById(R.id.Tt2);
+        Ed_3=(TextView)EducationLayout.findViewById(R.id.Tt3);
+        Ed_4=(TextView)EducationLayout.findViewById(R.id.Tt4);
+        Ed_5=(TextView)EducationLayout.findViewById(R.id.Tt5);
+        Ed_6=(TextView)EducationLayout.findViewById(R.id.Tt6);
 
         EducationLevel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,6 +167,16 @@ public class SabtAgahi_Estekhdam extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void Gharardad_map()
+    {
+        Gh_1=(TextView)GharardadLayout.findViewById(R.id.Tt1);
+        Gh_2=(TextView)GharardadLayout.findViewById(R.id.Tt2);
+        Gh_3=(TextView)GharardadLayout.findViewById(R.id.Tt3);
+        Gh_4=(TextView)GharardadLayout.findViewById(R.id.Tt4);
+
+
         Gharardad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -179,28 +220,5 @@ public class SabtAgahi_Estekhdam extends AppCompatActivity {
             }
         });
 
-
-    send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                tt("ارسال شد.");
-            }
-        });
-
-    }
-
-    public void tt(String s)
-    {
-        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
-    }
-    public PopupWindow popupDisplay(View view)
-    {
-        final PopupWindow popupWindow=new PopupWindow(this);
-        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        popupWindow.setFocusable(true);
-        popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
-        popupWindow.setContentView(view);
-        return popupWindow;
     }
 }
