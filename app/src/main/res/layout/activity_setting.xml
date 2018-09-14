@@ -1,98 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorDefaultBackground"
-    tools:context=".Activities.SettingActivity">
-
-    <ImageView
-        android:id="@+id/img_header"
+    tools:context=".Setting">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/img_header" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorDefaultBackground">
 
-    <TextView
-        android:id="@+id/txt_choose_language"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/img_header"
-        android:layout_marginRight="16dp"
-        android:text="@string/chooseLanguage" />
-
-    <RadioGroup
-        android:id="@+id/rg_language"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txt_choose_language"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="right"
+        >
 
-        <RadioButton
+        <TextView
             android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/white"
+            android:id="@+id/title"
+            android:textSize="20dp"
+            android:text="تنظیمات"
+            android:gravity="center|bottom"
+            android:paddingBottom="8dp"
+            android:paddingRight="3dp"/>
+        <ImageView
+            android:id="@+id/ic_logo"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_launcher_llogo" />
+    </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/img_header"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:text="@string/english" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_margin="10dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=" انتخاب زبان :"
+    android:textSize="20dp"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10dp"
+    android:textColor="@android:color/black"
+    android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="64dp"
-            android:checked="true"
-            android:text="@string/farsi" />
+            android:orientation="horizontal">
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="    English  "
+                android:textSize="16dp"
+                android:checked="false"
+                android:id="@+id/eng"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="20dp"/>
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="    فارسی  "
+                android:textSize="16dp"
+                android:checked="true"
+                android:id="@+id/per"
+            android:layout_weight="1"
+                android:paddingRight="20dp"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+           >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="انتخاب شهر :"
+                android:textSize="17dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="شهر مورد نظر خود را انتخاب کنید."
+            android:backgroundTint="@color/backColor"
+            android:gravity="right"
+            android:paddingRight="15dp"
+            android:id="@+id/T"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15dp"
 
-    </RadioGroup>
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="انتخاب پس زمینه :"
+                android:textSize="17dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setting_button"
+                android:id="@+id/gallery"
+                android:text="گالری"
+                android:textSize="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setting_button"
+                android:id="@+id/cam"
+                android:text="دوربین"
+                android:textSize="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp" />
 
-    <TextView
-        android:id="@+id/txt_choose_city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/txt_choose_language"
-        android:layout_below="@id/rg_language"
-        android:layout_marginTop="32dp"
-        android:text="@string/chooseCity" />
 
-    <Spinner
-        android:id="@+id/sp_cities"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txt_choose_city"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="16dp" />
-
-    <TextView
-        android:id="@+id/txt_choose_bg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/txt_choose_language"
-        android:layout_below="@id/sp_cities"
-        android:layout_marginTop="32dp"
-        android:text="@string/chooseBackGround" />
-
-    <Button
-        android:id="@+id/btn_camera"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/txt_choose_language"
-        android:layout_below="@id/txt_choose_bg"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_border"
-        android:gravity="center"
-        android:text="@string/camera" />
-
-    <Button
-        android:id="@+id/btn_gallery"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btn_camera"
-        android:layout_marginRight="32dp"
-        android:layout_toLeftOf="@id/btn_camera"
-        android:background="@drawable/btn_border"
-        android:gravity="center"
-        android:text="@string/gallery" />
-
-</RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
