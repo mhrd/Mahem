@@ -110,8 +110,20 @@
         <activity android:name=".JobBankMenu" />
         <activity android:name=".Filter_Home" />
         <activity android:name=".Filter_Estekhdami_monshi_fani" />
-        <activity android:name=".Filter_other"></activity>
-   
+        <activity android:name=".Filter_other"/>
+           <activity android:name=".Activities.JobBankMenuActivity" />
+        <activity android:name=".Activities.OffFinderActivity" />
+        <activity android:name=".Activities.RegisterActivity" />
+        <activity android:name=".Activities.CodeVerificationActivity" />
+        <activity android:name=".Activities.LawsActivity" />
+        <activity android:name=".Activities.AdsActivity" />
+        <activity android:name=".Activities.EmploymentActivity" />
+        <activity android:name=".Activities.MyAdsActivity" />
+        <activity android:name=".Activities.FavoritesActivity" />
+        <activity android:name=".Activities.AboutUsActivity" />
+        <activity android:name=".Activities.SettingActivity" />
+        <activity android:name=".Activities.ContactUsActivity"></activity>
+
     </application>
 
 </manifest>
