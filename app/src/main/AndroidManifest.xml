@@ -122,7 +122,8 @@
         <activity android:name=".Activities.FavoritesActivity" />
         <activity android:name=".Activities.AboutUsActivity" />
         <activity android:name=".Activities.SettingActivity" />
-        <activity android:name=".Activities.ContactUsActivity"></activity>
+        <activity android:name=".Activities.ContactUsActivity"/>
+        <activity android:name=".Setting"></activity>
 
     </application>
 
