@@ -1,4 +1,4 @@
-package com.example.mohsal.near_me2;
+package com.eagle.anonymous.mahem;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
