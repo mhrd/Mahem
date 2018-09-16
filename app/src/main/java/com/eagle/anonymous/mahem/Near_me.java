@@ -1,4 +1,4 @@
-package com.example.mohsal.near_me2;
+package com.eagle.anonymous.mahem;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
