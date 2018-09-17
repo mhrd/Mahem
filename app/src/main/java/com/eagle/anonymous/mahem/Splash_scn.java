@@ -21,7 +21,7 @@ public class Splash_scn extends AppCompatActivity {
             tt("دستگاه به اینترنت متصل نیست");
 //            img.setBackground(R.drawable.splash_dis);
         } else {
-            tran(MainActivity.class);
+            tran(Menu.class);
         }
     }
 
