@@ -12,7 +12,7 @@ Button medical,meeting,car,arayesh,uni,art,sport,teach,majles,computer,jewels,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_job_bank_menu);
 
-        medical=(Button)findViewById(R.id.medicine);
+       /* medical=(Button)findViewById(R.id.medicine);
         meeting=(Button)findViewById(R.id.meeting);
         car=(Button)findViewById(R.id.car);
         arayesh=(Button)findViewById(R.id.arayesh);
@@ -31,6 +31,6 @@ Button medical,meeting,car,arayesh,uni,art,sport,teach,majles,computer,jewels,
         industry=(Button)findViewById(R.id.industry);
         food=(Button)findViewById(R.id.food);
         design=(Button)findViewById(R.id.design);
-
+*/
     }
 }

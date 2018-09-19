@@ -3,7 +3,7 @@ package com.eagle.anonymous.mahem;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.amir.mahem.R;
+
 
 public class AboutUsActivity extends AppCompatActivity {
 

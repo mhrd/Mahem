@@ -134,16 +134,16 @@ public class contact extends AppCompatActivity {
 
 
 
-        call_Information=(Button)findViewById(R.id.call_inf);
-        call_Information.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(AgahiShow.this,contact.class);
-                startActivity(intent);
-
-
-
-            }
-        });
-    }
-}
+//        call_Information=(Button)findViewById(R.id.call_inf);
+//        call_Information.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(AgahiShow.this,contact.class);
+//                startActivity(intent);
+//
+//
+//
+//            }
+//        });
+//    }
+//}

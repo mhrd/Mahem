@@ -106,8 +106,8 @@ public class Takhfif_List extends AppCompatActivity {
                 //Creating the instance of PopupMenu
                 PopupMenu popup = new PopupMenu(Takhfif_List.this, city_selection);
                 //Inflating the Popup using xml file
-                popup.getMenuInflater()
-                        .inflate(R.menu.cities, popup.getMenu());
+//                popup.getMenuInflater()
+//                        .inflate(R.menu.cities, popup.getMenu());
 
 
                 //registering popup with OnMenuItemClickListener

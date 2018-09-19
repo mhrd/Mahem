@@ -98,32 +98,32 @@ public class Near_me extends AppCompatActivity {
 
         seekbarr();
         city_selection = (TextView) findViewById(R.id.select_city);
-        city_selection.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Creating the instance of PopupMenu
-                PopupMenu popup = new PopupMenu(Near_me.this, city_selection);
-                //Inflating the Popup using xml file
-                popup.getMenuInflater()
-                        .inflate(R.menu.cities, popup.getMenu());
-
-
-                //registering popup with OnMenuItemClickListener
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(
-                                Near_me.this,
-                                "You Clicked : " + item.getTitle(),
-                                Toast.LENGTH_SHORT
-                        ).show();
-                        return true;
-                    }
-                });
-                popup.show();
-            }
-
-
-        });
+//        city_selection.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //Creating the instance of PopupMenu
+//                PopupMenu popup = new PopupMenu(Near_me.this, city_selection);
+//                //Inflating the Popup using xml file
+//                popup.getMenuInflater()
+//                        .inflate(R.menu.cities, popup.getMenu());
+//
+//
+//                //registering popup with OnMenuItemClickListener
+//                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+//                    public boolean onMenuItemClick(MenuItem item) {
+//                        Toast.makeText(
+//                                Near_me.this,
+//                                "You Clicked : " + item.getTitle(),
+//                                Toast.LENGTH_SHORT
+//                        ).show();
+//                        return true;
+//                    }
+//                });
+//                popup.show();
+//            }
+//
+//
+//        });
     }
 
 

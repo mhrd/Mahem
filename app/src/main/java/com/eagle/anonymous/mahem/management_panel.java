@@ -26,8 +26,8 @@ public class management_panel extends AppCompatActivity {
     FloatingActionButton fab;
 
 
-    private String title, describtion, time,family_name,chat_time;
-    private int agahiimage,userImage;
+    private String title, describtion, time, family_name, chat_time;
+    private int agahiimage, userImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,25 +46,25 @@ public class management_panel extends AppCompatActivity {
         
         */
 
-        userImage=R.drawable.cameraa;
+        userImage = R.drawable.cameraa;
 
 
-        AdvList=new ArrayList<>();
-        recyclerView=(RecyclerView)findViewById(R.id.RecyclerView);
+        AdvList = new ArrayList<>();
+        recyclerView = (RecyclerView) findViewById(R.id.RecyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         ///this line add agahi views to the list:
-        AdvList.add(new Advertising(title,describtion,time,agahiimage,family_name,chat_time,userImage));
-        adapter=new panelAdapter(this,AdvList);
+        AdvList.add(new Advertising(title, describtion, time, agahiimage, family_name, chat_time, userImage));
+        adapter = new panelAdapter(this, AdvList);
         recyclerView.setAdapter(adapter);
 
-        paneltxt=(TextView)findViewById(R.id.mp);
-        paneltxt.setText(family_name+"پنل مدیریت");
+        paneltxt = (TextView) findViewById(R.id.mp);
+        paneltxt.setText(family_name + "پنل مدیریت");
 
-        AccountImage=(CircleImageView)findViewById(R.id.AccoutImage);
+        AccountImage = (CircleImageView) findViewById(R.id.AccoutImage);
         AccountImage.setImageResource(userImage);
 
-        fab=(FloatingActionButton)findViewById(R.id.FAB);
+        fab = (FloatingActionButton) findViewById(R.id.FAB);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

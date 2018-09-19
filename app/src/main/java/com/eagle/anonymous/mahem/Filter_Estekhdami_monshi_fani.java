@@ -88,7 +88,7 @@ public class Filter_Estekhdami_monshi_fani extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Ed_Layout=popupDisplay(CallLayout);
+//                Ed_Layout=popupDisplay(CallLayout);
                 Ed_Layout.showAsDropDown(view);
             }
         });
@@ -154,7 +154,7 @@ public class Filter_Estekhdami_monshi_fani extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Gh_Layout=popupDisplay(CallLayout);
+//                Gh_Layout=popupDisplay(CallLayout);
                 Gh_Layout.showAsDropDown(view);
 
 
