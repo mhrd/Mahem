@@ -137,8 +137,8 @@
         <activity android:name=".Activities.AboutUsActivity" />
         <activity android:name=".Activities.SettingActivity" />
         <activity android:name=".Activities.ContactUsActivity"/>
-        <activity android:name=".Setting"></activity>
-
+        <activity android:name=".Setting"/>
+        <activity android:name=".Page1"></activity>
     </application>
 
 </manifest>
