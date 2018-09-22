@@ -1,6 +1,7 @@
 package com.eagle.anonymous.mahem;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,19 +9,24 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class Setting extends AppCompatActivity {
 
-Button cam,gallery;
-EditText city;
+    Button cam,gallery,send;
+    EditText city;
     View CityLayout;
     TextView city_1,city_2,city_3,city_4,city_5,city_6,city_7,city_8,city_9
             ,city_10,city_11,city_12,city_13,city_14;
     PopupWindow City_Layout;
-Switch per,eng;
+    RadioButton per,eng;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,17 +34,33 @@ Switch per,eng;
 
         cam=(Button)findViewById(R.id.cam);
         gallery=(Button)findViewById(R.id.gallery);
+        send=(Button)findViewById(R.id.send);
 
         city=(EditText)findViewById(R.id.T);
 
-        eng=(Switch)findViewById(R.id.eng);
-        per=(Switch)findViewById(R.id.per);
+        eng=(RadioButton) findViewById(R.id.eng);
+        per=(RadioButton) findViewById(R.id.per);
 
         LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         CityLayout=inflater.inflate(R.layout.city_layout,null);
 
         City_map();
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tt("اعمال شد.");
+            }
+        });
+
+        Toast.makeText(this,getLocalClassName().toString()+"\nNiky",Toast.LENGTH_LONG).show();
+
     }
+    public void tt(String s)
+    {
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
+    }
+
+
     public PopupWindow popupDisplay(View view)
     {
         final PopupWindow popupWindow=new PopupWindow(this);
@@ -219,3 +241,5 @@ Switch per,eng;
 
     }
 }
+
+
