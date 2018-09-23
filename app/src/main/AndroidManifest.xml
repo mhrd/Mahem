@@ -29,6 +29,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Mahem_bottom_navigation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Collections" android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -137,8 +144,8 @@
         <activity android:name=".Activities.AboutUsActivity" />
         <activity android:name=".Activities.SettingActivity" />
         <activity android:name=".Activities.ContactUsActivity"/>
-        <activity android:name=".Setting"></activity>
-
+        <activity android:name=".Setting"/>
+        <activity android:name=".Page1"></activity>
     </application>
 
 </manifest>
