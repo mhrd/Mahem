@@ -32,7 +32,7 @@ public class Mahem_bottom_navigation extends AppCompatActivity {
             }
         });
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MenuFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
     }
 
     public static void disableShiftMode(BottomNavigationView view) {
