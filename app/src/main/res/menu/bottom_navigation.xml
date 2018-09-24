@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_f"
+        android:icon="@drawable/menu"
+
+        />
+    <item
+        android:id="@+id/search_f"
+        android:icon="@drawable/search"
+
+        />
+    <item
+        android:id="@+id/add_f"
+
+
+        />
+    <item
+        android:id="@+id/home_f"
+        android:icon="@drawable/icon"
+
+
+        />
+
+    <item
+        android:id="@+id/menuLine_f"
+        android:icon="@drawable/menuline"
+
+
+        />
+</menu>

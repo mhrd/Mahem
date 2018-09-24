@@ -6,8 +6,7 @@
     android:id="@+id/activity_mahem_bottom_navigation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context="com.example.mohsal.mahem_bottom_navigation.Mahem_bottom_navigation">
+    >
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">

@@ -17,14 +17,15 @@ import java.lang.reflect.Field;
 public class Mahem_bottom_navigation extends AppCompatActivity {
 
     RelativeLayout add_btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mahem_bottom_navigation);
-        BottomNavigationView bottomNavigationView=(BottomNavigationView)findViewById(R.id.bottomnav);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomnav);
         bottomNavigationView.setOnNavigationItemSelectedListener(navlistener);
         disableShiftMode(bottomNavigationView);
-        add_btn=(RelativeLayout)findViewById(R.id.add) ;
+        add_btn = (RelativeLayout) findViewById(R.id.add);
         add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +33,7 @@ public class Mahem_bottom_navigation extends AppCompatActivity {
             }
         });
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
     }
 
     public static void disableShiftMode(BottomNavigationView view) {
@@ -50,36 +51,36 @@ public class Mahem_bottom_navigation extends AppCompatActivity {
         }
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navlistener=
+    private BottomNavigationView.OnNavigationItemSelectedListener navlistener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectedfragment=null;
-                    switch (item.getItemId()){
+                    Fragment selectedfragment = null;
+                    switch (item.getItemId()) {
                         case R.id.menu_f:
-                            selectedfragment=new MenuFragment();
+                            selectedfragment = new MenuFragment();
                             break;
                         case R.id.search_f:
-                            selectedfragment=new SearchFragment();
+                            selectedfragment = new SearchFragment();
                             break;
                         case R.id.home_f:
-                            selectedfragment=new HomeFragment();
+                            selectedfragment = new HomeFragment();
                             break;
                         case R.id.menuLine_f:
-                            selectedfragment=new MenuLineFragment();
+                            selectedfragment = new MenuLineFragment();
                             break;
                         case R.id.add_f:
                             add_clicked();
                             break;
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedfragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedfragment).commit();
                     return true;
                 }
             };
 
-    public void add_clicked(){
+    public void add_clicked() {
 
-        Intent i=new Intent(AboutUs.this,SabtAgahi_other.class);
+        Intent i = new Intent(getBaseContext(), SabtAgahi_other.class);
         startActivity(i);
     }
 }

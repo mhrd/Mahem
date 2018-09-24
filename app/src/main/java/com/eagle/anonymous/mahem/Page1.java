@@ -12,75 +12,74 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Page1 extends AppCompatActivity {
-TextView CityName;
-ImageView Image;
-ListView Estekhdami,Agahi;
+    TextView CityName;
+    ImageView Image;
+    ListView Estekhdami, Agahi;
 
     View navigationBar;
-    ImageView Home,Add,Menu,MenuLine,Search;
+    ImageView Home, Add, Menu, MenuLine, Search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page1);
 
-        CityName=(TextView)findViewById(R.id.title);
-        Image=(ImageView)findViewById(R.id.image);
+        CityName = (TextView) findViewById(R.id.title);
+        Image = (ImageView) findViewById(R.id.image);
 
-        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        Estekhdami=(ListView)findViewById(R.id.listv1);
-        Agahi=(ListView) findViewById(R.id.listv2);
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        Estekhdami = (ListView) findViewById(R.id.listv1);
+        Agahi = (ListView) findViewById(R.id.listv2);
 
         map();
-        Toast.makeText(this,getLocalClassName().toString()+"\nNiky",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getLocalClassName().toString() + "\nNiky", Toast.LENGTH_LONG).show();
     }
 
 
-    public void map()
-    {
-        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        navigationBar=inflater.inflate(R.layout.bottom_navigation,null);
-        Home=(ImageView)navigationBar.findViewById(R.id.home);
-        Add=(ImageView)navigationBar.findViewById(R.id.add);
-        Menu=(ImageView)navigationBar.findViewById(R.id.menu);
-        MenuLine=(ImageView)navigationBar.findViewById(R.id.menuLine);
-        Search=(ImageView)navigationBar.findViewById(R.id.search);
+    public void map() {
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        navigationBar = inflater.inflate(R.layout.bottom_navigation, null);
+        Home = (ImageView) navigationBar.findViewById(R.id.home);
+        Add = (ImageView) navigationBar.findViewById(R.id.add);
+        Menu = (ImageView) navigationBar.findViewById(R.id.menu_f);
+        MenuLine = (ImageView) navigationBar.findViewById(R.id.menuLine_f);
+        Search = (ImageView) navigationBar.findViewById(R.id.search_f);
 
-        Search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(ContactUs.this,Search.class);
-                startActivity(i);
-
-            }
-        });
-
-        Menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(ContactUs.this,Menu2.class);
-                startActivity(i);
-
-            }
-        });
-
-        Add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(ContactUs.this,SabtAgahi_other.class);
-                startActivity(i);
-
-            }
-        });
-
-        MenuLine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(ContactUs.this,Group.class);
-                startActivity(i);
-
-            }
-        });
+//        Search.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(getBaseContext(), Search.class);
+//                startActivity(i);
+//
+//            }
+//        });
+//
+//        Menu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(getBaseContext(), Menu2.class);
+//                startActivity(i);
+//
+//            }
+//        });
+//
+//        Add.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(getBaseContext(), SabtAgahi_other.class);
+//                startActivity(i);
+//
+//            }
+//        });
+//
+//        MenuLine.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(getBaseContext(), Group.class);
+//                startActivity(i);
+//
+//            }
+//        });
 
 
     }
