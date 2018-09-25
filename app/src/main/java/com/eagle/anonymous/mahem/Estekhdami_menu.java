@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Estekhdami_menu extends AppCompatActivity {
-    View navigationBar;
-    ImageView Home,Add,Menu,MenuLine,Search;
     ImageView Filter;
 
     RecyclerView recyclerView;
@@ -53,58 +51,10 @@ public class Estekhdami_menu extends AppCompatActivity {
         });
 
 
-        map();
+   
 
         Toast.makeText(this,getLocalClassName().toString()+"\nNiky",Toast.LENGTH_LONG).show();
     }
 
 
-    public void map()
-    {
-        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        navigationBar=inflater.inflate(R.layout.bottom_navigation,null);
-        Home=(ImageView)navigationBar.findViewById(R.id.home);
-        Add=(ImageView)navigationBar.findViewById(R.id.add);
-        Menu=(ImageView)navigationBar.findViewById(R.id.menu_f);
-        MenuLine=(ImageView)navigationBar.findViewById(R.id.menuLine_f);
-        Search=(ImageView)navigationBar.findViewById(R.id.search_f);
-
-        Search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Estekhdami_menu.this,Search.class);
-                startActivity(i);
-
-            }
-        });
-
-        Menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Estekhdami_menu.this,Menu2.class);
-                startActivity(i);
-
-            }
-        });
-
-        Add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Estekhdami_menu.this,SabtAgahi_other.class);
-                startActivity(i);
-
-            }
-        });
-
-        MenuLine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Estekhdami_menu.this,Group.class);
-                startActivity(i);
-
-            }
-        });
-
-
-    }
-}
+   }
