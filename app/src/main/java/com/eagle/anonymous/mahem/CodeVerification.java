@@ -12,9 +12,7 @@ import android.widget.ImageView;
 public class CodeVerification extends AppCompatActivity {
     EditText etCode;
     Button btnVerify;
-    View navigationBar;
-    ImageView Home,Add,Menu,MenuLine,Search;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,57 +33,7 @@ public class CodeVerification extends AppCompatActivity {
             CodeVerification.this.finish();
             }
         });
-        map();
-
-
-    }
-
-
-    public void map()
-    {
-        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        navigationBar=inflater.inflate(R.layout.bottom_navigation,null);
-        Home=(ImageView)navigationBar.findViewById(R.id.home);
-        Add=(ImageView)navigationBar.findViewById(R.id.add);
-        Menu=(ImageView)navigationBar.findViewById(R.id.menu_f);
-        MenuLine=(ImageView)navigationBar.findViewById(R.id.menuLine_f);
-        Search=(ImageView)navigationBar.findViewById(R.id.search_f);
-
-        Search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(CodeVerification.this,Search.class);
-                startActivity(i);
-
-            }
-        });
-
-        Menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(CodeVerification.this,Menu2.class);
-                startActivity(i);
-
-            }
-        });
-
-        Add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(CodeVerification.this,SabtAgahi_other.class);
-                startActivity(i);
-
-            }
-        });
-
-        MenuLine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(CodeVerification.this,Group.class);
-                startActivity(i);
-
-            }
-        });
+    
 
 
     }
