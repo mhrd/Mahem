@@ -11,9 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class Menu extends AppCompatActivity {
-    View navigationBar;
-    ImageView Home,Add,Menu,MenuLine,Search;
-
+   
     RelativeLayout JobBank,OffFinder,Register,Laws,ads,Estekhdami,MyAds,Share,Favorite,aboutUs,Setting,ContactUs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,57 +117,9 @@ JobBank.setOnClickListener(new View.OnClickListener() {
 
 
 
-        map();
+   
     }
 
 
-    public void map()
-    {
-        LayoutInflater inflater=(LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        navigationBar=inflater.inflate(R.layout.bottom_navigation,null);
-        Home=(ImageView)navigationBar.findViewById(R.id.home);
-        Add=(ImageView)navigationBar.findViewById(R.id.add);
-        Menu=(ImageView)navigationBar.findViewById(R.id.menu_f);
-        MenuLine=(ImageView)navigationBar.findViewById(R.id.menuLine_f);
-        Search=(ImageView)navigationBar.findViewById(R.id.search_f);
-
-        Search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Menu.this,Search.class);
-                startActivity(i);
-
-            }
-        });
-
-        Menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Menu.this,Menu2.class);
-                startActivity(i);
-
-            }
-        });
-
-        Add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Menu.this,SabtAgahi_other.class);
-                startActivity(i);
-
-            }
-        });
-
-        MenuLine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Menu.this,Group.class);
-                startActivity(i);
-
-            }
-        });
-
-
-    }
-
+   
 }
