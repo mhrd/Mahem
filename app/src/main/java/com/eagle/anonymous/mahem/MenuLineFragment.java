@@ -13,6 +13,8 @@ public class MenuLineFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_group,container,false);
+        View menuLineView inflater.inflate(R.layout.activity_group,container,false);
+        
+        return menuLineView;
     }
 }
