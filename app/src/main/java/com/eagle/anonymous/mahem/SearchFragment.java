@@ -49,10 +49,12 @@ public class SearchFragment extends Fragment {
         AdvList= new ArrayList<>();
 
         for(int i=0;i<counter;++i) {
+            ////here you can add information
             title.add("ii");
             describtion.add("jj");
             time.add("yy");
             image.add(R.drawable.add);
+            //////////////////////
             recyclerView = (RecyclerView) searchView.findViewById(R.id.RecyclerView);
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
