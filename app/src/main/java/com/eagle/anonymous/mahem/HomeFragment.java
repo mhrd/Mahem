@@ -13,8 +13,14 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       // View homeView=inflater.inflate(R.layout.,container,false);
-        
+       View homeView=inflater.inflate(R.layout.home,container,false);
+
+        CityName = (TextView) homeView.findViewById(R.id.title);
+        Image = (ImageView) homeView.findViewById(R.id.image);
+
+
+        Estekhdami = (ListView) homeView.findViewById(R.id.listv1);
+        Agahi = (ListView) homeView.findViewById(R.id.listv2);
         return homeView;
     }
 }
