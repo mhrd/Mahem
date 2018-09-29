@@ -15,20 +15,16 @@ public class MenuLineFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View menuLineView inflater.inflate(R.layout.activity_group,container,false);
-        getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
-
-
-
-        estekhdam=(Button)findViewById(R.id.btn1);
-        amlak=(Button)findViewById(R.id.btn2);
-        naghlie=(Button)findViewById(R.id.btn3);
-        electric=(Button)findViewById(R.id.btn4);
-        home=(Button)findViewById(R.id.btn5);
-        khadamat=(Button)findViewById(R.id.btn6);
-        tajhizat=(Button)findViewById(R.id.btn7);
-        sargarmi=(Button)findViewById(R.id.btn8);
-        personal=(Button)findViewById(R.id.btn9);
+        View MenuLineView= inflater.inflate(R.layout.activity_group,container,false);
+        estekhdam=(Button)MenuLineView.findViewById(R.id.btn1);
+        amlak=(Button)MenuLineView.findViewById(R.id.btn2);
+        naghlie=(Button)MenuLineView.findViewById(R.id.btn3);
+        electric=(Button)MenuLineView.findViewById(R.id.btn4);
+        home=(Button)MenuLineView.findViewById(R.id.btn5);
+        khadamat=(Button)MenuLineView.findViewById(R.id.btn6);
+        tajhizat=(Button)MenuLineView.findViewById(R.id.btn7);
+        sargarmi=(Button)MenuLineView.findViewById(R.id.btn8);
+        personal=(Button)MenuLineView.findViewById(R.id.btn9);
 
 
         estekhdam.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +54,7 @@ public class MenuLineFragment extends Fragment {
             public void onClick(View view) {
                 Intent i=new Intent(Group.this,Electric.class);
                 startActivity(i);
+                
             }
         });
 
@@ -98,9 +95,6 @@ public class MenuLineFragment extends Fragment {
                 startActivity(i);
             }
         });
-
-        Toast.makeText(this,getLocalClassName().toString()+"\nNiky",Toast.LENGTH_LONG).show();
-
-        return menuLineView;
+        return MenuLineView;
     }
 }
