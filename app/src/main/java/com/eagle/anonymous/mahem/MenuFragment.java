@@ -17,28 +17,29 @@ RelativeLayout JobBank,OffFinder,Register,Laws,ads,Estekhdami,MyAds,Share,Favori
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View menuView= inflater.inflate(R.layout.activity_menu2,container,false);
-        
-        JobBank=(RelativeLayout)findViewById(R.id.btn_bank);
-        OffFinder=(RelativeLayout)findViewById(R.id.btn_off);
-        Register=(RelativeLayout)findViewById(R.id.btn_register);
-        Laws=(RelativeLayout)findViewById(R.id.btn_law);
-        ads=(RelativeLayout)findViewById(R.id.btn_ads);
-        Estekhdami=(RelativeLayout)findViewById(R.id.btn_employment);
-        MyAds=(RelativeLayout)findViewById(R.id.btn_my_ads);
-        Share=(RelativeLayout)findViewById(R.id.btn_share);
-        Favorite=(RelativeLayout)findViewById(R.id.btn_favorite);
-        aboutUs=(RelativeLayout)findViewById(R.id.btn_about_us);
-        Setting=(RelativeLayout)findViewById(R.id.btn_setting);
-        ContactUs=(RelativeLayout)findViewById(R.id.btn_contact_us);
+        View menuView=inflater.inflate(R.layout.activity_menu2,container,false);
 
-        Toast.makeText(this,getLocalClassName().toString()+"\nNiky",Toast.LENGTH_LONG).show();
+        JobBank=(RelativeLayout)menuView.findViewById(R.id.btn_bank);
+        OffFinder=(RelativeLayout)menuView.findViewById(R.id.btn_off);
+        Register=(RelativeLayout)menuView.findViewById(R.id.btn_register);
+        Laws=(RelativeLayout)menuView.findViewById(R.id.btn_law);
+        ads=(RelativeLayout)menuView.findViewById(R.id.btn_ads);
+        Estekhdami=(RelativeLayout)menuView.findViewById(R.id.btn_employment);
+        MyAds=(RelativeLayout)menuView.findViewById(R.id.btn_my_ads);
+        Share=(RelativeLayout)menuView.findViewById(R.id.btn_share);
+        Favorite=(RelativeLayout)menuView.findViewById(R.id.btn_favorite);
+        aboutUs=(RelativeLayout)menuView.findViewById(R.id.btn_about_us);
+        Setting=(RelativeLayout)menuView.findViewById(R.id.btn_setting);
+        ContactUs=(RelativeLayout)menuView.findViewById(R.id.btn_contact_us);
+
+
 
         JobBank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(Menu2.this,JobBankMenu.class);
                 startActivity(i);
+
             }
         });
 
@@ -114,7 +115,8 @@ RelativeLayout JobBank,OffFinder,Register,Laws,ads,Estekhdami,MyAds,Share,Favori
                 Intent i=new Intent(Menu2.this,ContactUs.class);
                 startActivity(i);
             }
-});
+        });
+
         return menuView;
     }
 }
